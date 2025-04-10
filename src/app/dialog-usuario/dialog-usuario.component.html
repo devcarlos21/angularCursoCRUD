@@ -1,0 +1,57 @@
+
+<div class="dialog">
+    <form [formGroup]="formUsuarios" (ngSubmit)="guardar()">
+        <h2>Formulario de Usuario</h2>
+        <!-- 'id', 'nombre', 'ap1', 'ap2', 'email', 'curp', 'sexo', 'id_rol', 'password' -->
+        <mat-form-field>    
+            <mat-label>ID</mat-label>
+            <input matInput formControlName="id" id="id" placeholder="ID" required>
+        </mat-form-field>
+
+        <mat-form-field>    
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre" id="nombre" placeholder="Nombre" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Apellido Paterno</mat-label>
+            <input matInput formControlName="ap1" id="ap1" placeholder="Apellido Paterno" required>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Apellido Materno</mat-label>
+            <input matInput formControlName="ap2" id="ap2" placeholder="Apellido Materno" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" id="email" placeholder="Email" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>CURP</mat-label>
+            <input matInput formControlName="curp" id="curp" placeholder="CURP" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Sexo</mat-label>
+            <input matInput formControlName="sexo" id="sexo" placeholder="Sexo" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>id_rol</mat-label>
+            <input matInput formControlName="id_rol" id="id_rol" placeholder="ID_Rol" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" id="password" placeholder="Password" required>
+        </mat-form-field>
+
+        <!-- [disabled]="formUsuarios.invalid -->
+        <button type="submit" class="btn btn-primary">
+            Enviar
+        </button>
+    </form>
+    
+</div>
