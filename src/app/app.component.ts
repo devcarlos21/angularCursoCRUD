@@ -56,16 +56,39 @@ export class AppComponent implements OnInit{
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogUsuarioComponent, {
-      width : '80%',
-      height : '80%'
-
+      width: '80%',
+      height: '80%',
+      data: { mode: 'create' } // Modo para crear un usuario
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-
+      console.log('El formulario de creación fue cerrado');
     });
   }
+
+  openEditDialog(): void {
+    const dialogRef = this.dialog.open(DialogUsuarioComponent, {
+      width: '80%',
+      height: '80%',
+      data: { mode: 'edit' } // Modo para editar un usuario
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('El formulario de edición fue cerrado');
+    });
+  }
+
+  openDeleteDialog(): void {
+    const dialogRef = this.dialog.open(DialogUsuarioComponent, {
+      width: '80%',
+      height: '80%',
+      data: { mode: 'delete' } // Modo para eliminar un usuario
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('El formulario de eliminación fue cerrado');
+    });
+  }  
 
 
 
